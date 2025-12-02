@@ -1,0 +1,14 @@
+parsers:
+  text/plain:
+    class: "langchain_community.document_loaders.parsers.txt.TextParser"
+    kwargs: {}
+  text/html:
+    class: "langchain_community.document_loaders.parsers.BS4HTMLParser"
+    kwargs: {}
+  application/pdf:
+    class: "langchain_community.document_loaders.parsers.PDFPlumberParser"
+    kwargs: {}
+
+fallback:
+  class: "langchain_community.document_loaders.parsers.txt.TextParser"
+  kwargs: {}
